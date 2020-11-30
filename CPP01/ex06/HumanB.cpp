@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/27 11:02:45 by timlecou          #+#    #+#             */
-/*   Updated: 2020/11/27 19:42:47 by timlecou         ###   ########.fr       */
+/*   Created: 2020/11/29 15:57:54 by timlecou          #+#    #+#             */
+/*   Updated: 2020/11/29 18:56:34 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
-# include <iostream>
-# include <string>
+#include "HumanB.hpp"
 
-class	Pony
+HumanB::HumanB(std::string name)
 {
-	public:
-		Pony(std::string n, std::string c);
-		~Pony();
+	this->_name = name;
+	return ;
+}
 
-		void	eat(std::string thing) const;
-		void	run(int distance) const;
-		void	sleep(int time) const;
-	private:
-		std::string		_name;
-		std::string		_color;
-};
+HumanB::~HumanB(void)
+{
+	return ;
+}
 
-#endif
+void	HumanB::setWeapon(Weapon &weapon)
+{
+	this->_weapon = &weapon;
+}
+
+void	HumanB::attack(void)
+{
+	std::cout << _name << " attacks with " << _weapon->getType() << std::endl;
+}

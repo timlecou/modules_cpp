@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   ZombieHorde.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/27 11:02:45 by timlecou          #+#    #+#             */
-/*   Updated: 2020/11/27 19:42:47 by timlecou         ###   ########.fr       */
+/*   Created: 2020/11/28 14:23:14 by timlecou          #+#    #+#             */
+/*   Updated: 2020/11/28 14:58:34 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
+#ifndef ZOMBIEHORDE_HPP
+# define ZOMBIEHORDE_HPP
 # include <iostream>
-# include <string>
+# include "Zombie.hpp"
 
-class	Pony
+class	ZombieHorde
 {
 	public:
-		Pony(std::string n, std::string c);
-		~Pony();
-
-		void	eat(std::string thing) const;
-		void	run(int distance) const;
-		void	sleep(int time) const;
+		ZombieHorde(unsigned int n);
+		~ZombieHorde();
+		void	announce() const;
 	private:
-		std::string		_name;
-		std::string		_color;
+		int			_n;
+		Zombie		*_zombs;
 };
 
 #endif

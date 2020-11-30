@@ -1,32 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/27 11:02:45 by timlecou          #+#    #+#             */
-/*   Updated: 2020/11/27 19:42:47 by timlecou         ###   ########.fr       */
+/*   Created: 2020/11/28 14:25:30 by timlecou          #+#    #+#             */
+/*   Updated: 2020/11/28 15:01:54 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
-# include <iostream>
-# include <string>
+#include "ZombieHorde.hpp"
 
-class	Pony
+ZombieHorde::ZombieHorde(unsigned int n)
 {
-	public:
-		Pony(std::string n, std::string c);
-		~Pony();
+	this->_n = n;
+	if (n < 1)
+		return ;
+	this->_zombs = new Zombie[n];
+}
 
-		void	eat(std::string thing) const;
-		void	run(int distance) const;
-		void	sleep(int time) const;
-	private:
-		std::string		_name;
-		std::string		_color;
-};
+ZombieHorde::~ZombieHorde()
+{
+	if (this->_n > 0)
+		delete[] this->_zombs; 
+}
 
-#endif
+void	ZombieHorde::announce(void) const
+{
+	int		i;
+
+	i = 0;
+	while (i < this->_n)
+	{
+		this->_zombs[i].announce();
+		i++;
+	}
+}

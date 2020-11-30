@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/27 11:02:45 by timlecou          #+#    #+#             */
-/*   Updated: 2020/11/27 19:42:47 by timlecou         ###   ########.fr       */
+/*   Created: 2020/11/28 09:04:31 by timlecou          #+#    #+#             */
+/*   Updated: 2020/11/28 10:48:02 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
-# include <iostream>
-# include <string>
+#include "Zombie.hpp"
 
-class	Pony
+Zombie::Zombie(std::string name, std::string type): _name(name), _type(type)
 {
-	public:
-		Pony(std::string n, std::string c);
-		~Pony();
+	std::cout << "<" << name << " " << type << ">" << " was born" << std::endl;
+}
 
-		void	eat(std::string thing) const;
-		void	run(int distance) const;
-		void	sleep(int time) const;
-	private:
-		std::string		_name;
-		std::string		_color;
-};
-
-#endif
+void	Zombie::advert(void) const
+{
+	std::cout << "<" << this->_name << " " << this->_type << "> ";
+	std::cout << "Braiiiiiiinnsssssss ..." << std::endl;
+}

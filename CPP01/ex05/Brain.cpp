@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/27 11:02:45 by timlecou          #+#    #+#             */
-/*   Updated: 2020/11/27 19:42:47 by timlecou         ###   ########.fr       */
+/*   Created: 2020/11/28 17:59:27 by timlecou          #+#    #+#             */
+/*   Updated: 2020/11/29 11:30:54 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
-# include <iostream>
-# include <string>
+#include "Brain.hpp"
 
-class	Pony
+std::string	Brain::identify(void) const
 {
-	public:
-		Pony(std::string n, std::string c);
-		~Pony();
+	std::stringstream str;
 
-		void	eat(std::string thing) const;
-		void	run(int distance) const;
-		void	sleep(int time) const;
-	private:
-		std::string		_name;
-		std::string		_color;
-};
-
-#endif
+	str << "0x" << std::uppercase << std::hex << uintptr_t(this);
+	return (str.str());
+}

@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/27 11:02:45 by timlecou          #+#    #+#             */
-/*   Updated: 2020/11/27 19:42:47 by timlecou         ###   ########.fr       */
+/*   Created: 2020/11/29 15:09:00 by timlecou          #+#    #+#             */
+/*   Updated: 2020/11/29 18:56:41 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
-# include <iostream>
-# include <string>
+#include "HumanA.hpp"
 
-class	Pony
+HumanA::HumanA(std::string name, Weapon &weapon)
 {
-	public:
-		Pony(std::string n, std::string c);
-		~Pony();
+	this->_name = name;
+	this->_weapon = &weapon;
+	return ;
+}
 
-		void	eat(std::string thing) const;
-		void	run(int distance) const;
-		void	sleep(int time) const;
-	private:
-		std::string		_name;
-		std::string		_color;
-};
+HumanA::~HumanA(void)
+{
+	return ;
+}
 
-#endif
+void	HumanA::attack(void)
+{
+	std::cout << this->_name << " attacks with " << _weapon->getType() << std::endl;
+	return ;
+}

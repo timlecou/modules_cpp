@@ -1,32 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/27 11:02:45 by timlecou          #+#    #+#             */
-/*   Updated: 2020/11/27 19:42:47 by timlecou         ###   ########.fr       */
+/*   Created: 2020/11/29 15:03:23 by timlecou          #+#    #+#             */
+/*   Updated: 2020/11/29 18:42:43 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
-# include <iostream>
-# include <string>
+#include "Weapon.hpp"
 
-class	Pony
+Weapon::Weapon(std::string type)
 {
-	public:
-		Pony(std::string n, std::string c);
-		~Pony();
+	this->setType(type);
+	return ;
+}
 
-		void	eat(std::string thing) const;
-		void	run(int distance) const;
-		void	sleep(int time) const;
-	private:
-		std::string		_name;
-		std::string		_color;
-};
+Weapon::Weapon()
+{
+	this->setType("default type");
+}
 
-#endif
+Weapon::~Weapon()
+{
+	return ;
+}
+
+std::string	&Weapon::getType(void)
+{
+	return (_type);
+}
+
+void		Weapon::setType(std::string type)
+{
+	this->_type = type;
+	return ;
+}

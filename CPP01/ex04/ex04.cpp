@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   ex04.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/27 11:02:45 by timlecou          #+#    #+#             */
-/*   Updated: 2020/11/27 19:42:47 by timlecou         ###   ########.fr       */
+/*   Created: 2020/11/28 15:05:09 by timlecou          #+#    #+#             */
+/*   Updated: 2020/11/28 15:13:43 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
-# include <iostream>
-# include <string>
+#include <iostream>
 
-class	Pony
+int		main(void)
 {
-	public:
-		Pony(std::string n, std::string c);
-		~Pony();
+	std::string		str = "HI THIS IS BRAIN";
+	std::string		*str2 = &str;
+	std::string		&str3 = *str2;
 
-		void	eat(std::string thing) const;
-		void	run(int distance) const;
-		void	sleep(int time) const;
-	private:
-		std::string		_name;
-		std::string		_color;
-};
-
-#endif
+	std::cout << "pointer   : " << *str2 << std::endl;
+	std::cout << "reference : " << str3 << std::endl;
+	return (0);
+}

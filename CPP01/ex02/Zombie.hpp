@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/27 11:02:45 by timlecou          #+#    #+#             */
-/*   Updated: 2020/11/27 19:42:47 by timlecou         ###   ########.fr       */
+/*   Created: 2020/11/28 09:01:43 by timlecou          #+#    #+#             */
+/*   Updated: 2020/11/28 10:40:42 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
-# include <iostream>
-# include <string>
+#include <iostream>
 
-class	Pony
+class	Zombie
 {
 	public:
-		Pony(std::string n, std::string c);
-		~Pony();
-
-		void	eat(std::string thing) const;
-		void	run(int distance) const;
-		void	sleep(int time) const;
+		Zombie(std::string name, std::string type);
+		void	advert() const;
 	private:
-		std::string		_name;
-		std::string		_color;
+		std::string	_name;
+		std::string	_type;
 };
-
-#endif

@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/27 11:02:45 by timlecou          #+#    #+#             */
-/*   Updated: 2020/11/27 19:42:47 by timlecou         ###   ########.fr       */
+/*   Created: 2020/11/29 15:06:37 by timlecou          #+#    #+#             */
+/*   Updated: 2020/11/29 18:54:48 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
-# include <iostream>
-# include <string>
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
+# include "Weapon.hpp"
 
-class	Pony
+class	HumanA
 {
 	public:
-		Pony(std::string n, std::string c);
-		~Pony();
-
-		void	eat(std::string thing) const;
-		void	run(int distance) const;
-		void	sleep(int time) const;
+		HumanA(std::string name, Weapon &weapon);
+		~HumanA();
+		void		attack(void);
 	private:
-		std::string		_name;
-		std::string		_color;
+		std::string	_name;
+		Weapon		*_weapon;
 };
 
 #endif

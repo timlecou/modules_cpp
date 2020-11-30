@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/27 11:02:45 by timlecou          #+#    #+#             */
-/*   Updated: 2020/11/27 19:42:47 by timlecou         ###   ########.fr       */
+/*   Created: 2020/11/28 10:43:44 by timlecou          #+#    #+#             */
+/*   Updated: 2020/11/28 13:57:36 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
-# include <iostream>
-# include <string>
+#include "ZombieEvent.hpp"
 
-class	Pony
+int		main(void)
 {
-	public:
-		Pony(std::string n, std::string c);
-		~Pony();
-
-		void	eat(std::string thing) const;
-		void	run(int distance) const;
-		void	sleep(int time) const;
-	private:
-		std::string		_name;
-		std::string		_color;
-};
-
-#endif
+	srand(time(0));
+	Zombie	*zomb = ZombieEvent("ugly").newZombie("zoboze");
+	ZombieEvent	zomb2("nom");
+	zomb->advert();
+	zomb2.randomChump();
+	delete	zomb;
+	return (0);
+}

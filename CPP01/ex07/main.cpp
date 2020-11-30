@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/27 11:02:45 by timlecou          #+#    #+#             */
-/*   Updated: 2020/11/27 19:42:47 by timlecou         ###   ########.fr       */
+/*   Created: 2020/11/29 19:01:42 by timlecou          #+#    #+#             */
+/*   Updated: 2020/11/30 11:12:30 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
-# include <iostream>
-# include <string>
+#include "replace.h"
 
-class	Pony
+int		main(int ac, char **av)
 {
-	public:
-		Pony(std::string n, std::string c);
-		~Pony();
-
-		void	eat(std::string thing) const;
-		void	run(int distance) const;
-		void	sleep(int time) const;
-	private:
-		std::string		_name;
-		std::string		_color;
-};
-
-#endif
+	if (ac != 4)
+	{
+		std::cerr << "wrong number of arguments" << std::endl;
+		return (1);
+	}
+	else if ((std::string)av[1] == "" || (std::string)av[2] == "" || (std::string)av[3] == "")
+	{
+		std::cerr << "parameters must be non-zero" << std::endl;
+		return (1);
+	}
+	return (ft_replace(av));
+}

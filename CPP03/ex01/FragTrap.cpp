@@ -6,7 +6,7 @@
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 21:23:16 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/01 11:37:06 by timlecou         ###   ########.fr       */
+/*   Updated: 2020/12/01 13:51:27 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,4 +114,20 @@ int		FragTrap::vaulthunter_dot_exe(std::string const & target)
 	this->_energy_pts -= 25;
 	std::cout << "FR4G-TP " << this->_name << " lose 25 energy points !" << std::endl;
 	return (1);
+}
+
+void	FragTrap::displayStats(void) const
+{
+	std::cout << "------------------STATS--------------------" << std::endl;
+	std::cout << "-------------------";
+	std::cout << this->_name << "-------------------" << std::endl;
+	std::cout << "Hit points: " << this->_hit_pts << std::endl;
+	std::cout << "Max hit points: " << this->_max_hit_pts << std::endl;
+	std::cout << "Energy points: " << this->_energy_pts << std::endl;
+	std::cout << "Max energy points: " << this->_max_energy_pts << std::endl;
+	std::cout << "Level: " << this->_level << std::endl;
+	std::cout << "Melee attack damage: " << this->_m_attack << std::endl;
+	std::cout << "Ranged attack damage: " << this->_r_attack << std::endl;
+	std::cout << "Armor damage reduction: " << this->_armor << std::endl;
+	std::cout << "-------------------------------------------" << std::endl;
 }

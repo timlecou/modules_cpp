@@ -6,7 +6,7 @@
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 20:00:01 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/01 11:37:15 by timlecou         ###   ########.fr       */
+/*   Updated: 2020/12/01 13:52:16 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class	FragTrap
 		void	meleeAttack(std::string const &target) const;
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
+		void	displayStats(void) const;
 
 		int		vaulthunter_dot_exe(std::string const & target);
 	private:

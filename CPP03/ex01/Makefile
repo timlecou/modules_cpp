@@ -6,12 +6,12 @@
 #    By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/30 22:50:31 by timlecou          #+#    #+#              #
-#    Updated: 2020/11/30 22:56:16 by timlecou         ###   ########.fr        #
+#    Updated: 2020/12/01 11:53:50 by timlecou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = frag
-SRCS = FragTrap.cpp main.cpp
+SRCS = FragTrap.cpp ScavTrap.cpp main.cpp
 OBJS = $(SRCS:%.cpp=%.o)
 CC = clang++
 FLAGS = -Werror -Wextra -Wall

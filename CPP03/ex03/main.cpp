@@ -5,36 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/30 22:31:30 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/01 11:36:38 by timlecou         ###   ########.fr       */
+/*   Created: 2020/12/01 13:16:54 by timlecou          #+#    #+#             */
+/*   Updated: 2020/12/01 14:43:45 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ClapTrap.hpp"
 #include "FragTrap.hpp"
+#include "ScavTrap.hpp"
+#include "NinjaTrap.hpp"
 
 int		main(void)
 {
 	srand(time(0));
 	FragTrap	frag("Tim");
-	FragTrap	frag2("{Bad robot}");;
+	ScavTrap	scav("Momo");
+	NinjaTrap	ninja("Thomas");
 
-	frag2 = frag;
+	ninja.ninjaShoebox(frag);
+	ninja.ninjaShoebox(scav);
+	ninja.ninjaShoebox(ninja);
 
-	frag.rangedAttack("{Bad robot}");
-	frag2.takeDamage(30);
-	frag.meleeAttack("{Bad robot}");
-	frag2.takeDamage(30);
-	if (frag2.vaulthunter_dot_exe("Tim"))
-		frag.takeDamage(30);
-	if (frag2.vaulthunter_dot_exe("Tim"))
-		frag.takeDamage(30);
-	if (frag2.vaulthunter_dot_exe("Tim"))
-		frag.takeDamage(30);
-	if (frag2.vaulthunter_dot_exe("Tim"))
-		frag.takeDamage(30);
-	if (frag2.vaulthunter_dot_exe("Tim"))
-		frag.takeDamage(30);
-	if (frag2.vaulthunter_dot_exe("Tim"))
-		frag.takeDamage(30);
+	ninja.displayStats();
+	frag.meleeAttack("Thomas");
+	ninja.takeDamage(30);
+	ninja.displayStats();
+	ninja.beRepaired(20);
+	ninja.displayStats();
 	return (0);
 }

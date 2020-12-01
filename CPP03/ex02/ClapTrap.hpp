@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/30 20:00:01 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/01 11:37:15 by timlecou         ###   ########.fr       */
+/*   Created: 2020/12/01 12:29:31 by timlecou          #+#    #+#             */
+/*   Updated: 2020/12/01 13:41:07 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 # include <iostream>
 
-class	FragTrap
+class	ClapTrap
 {
 	public:
-		FragTrap();
-		FragTrap(std::string name);
-		FragTrap(const FragTrap &trap);
-		~FragTrap();
-		FragTrap	&	operator=(FragTrap const &frag);
+		ClapTrap(void);
+		ClapTrap(const ClapTrap & clap);
+		ClapTrap(std::string name);
+		~ClapTrap(void);
+		ClapTrap	&	operator=(const ClapTrap & clap);
 
 		void	rangedAttack(std::string const &target) const;
 		void	meleeAttack(std::string const &target) const;
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
-
-		int		vaulthunter_dot_exe(std::string const & target);
-	private:
+		void	displayStats(void) const;
+	protected:
 		int			_hit_pts;
 		int			_max_hit_pts;
 		int			_energy_pts;

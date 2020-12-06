@@ -6,7 +6,7 @@
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 14:04:46 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/05 17:59:48 by timlecou         ###   ########.fr       */
+/*   Updated: 2020/12/06 13:37:02 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,15 @@ Character::Character(const Character &c)
 		this->_inv[i] = NULL;
 	for (unsigned int j = 0; j < c.getCount(); j++)
 		this->_inv[j] = c._inv[j]->clone();
+}
+
+Character::~Character(void)
+{
+	for (int i = 0; i < 4; i++)
+	{
+		if (this->_inv[i] != NULL)
+			delete this->_inv[i];
+	}
 }
 
 Character&	Character::operator=(const Character &c)

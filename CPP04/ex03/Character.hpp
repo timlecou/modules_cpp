@@ -6,7 +6,7 @@
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/05 13:50:43 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/05 17:59:28 by timlecou         ###   ########.fr       */
+/*   Updated: 2020/12/06 13:37:15 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class	Character : public ICharacter
 	public:
 		Character(std::string const &name);
 		Character(const Character &c);
-		~Character(void) {}
+		~Character(void);
 		Character&		operator=(const Character &c);
 
 		std::string const&	getName(void) const;

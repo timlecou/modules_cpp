@@ -15,56 +15,40 @@
 #include "Character.hpp"
 #include "MateriaSource.hpp"
 
-void fct(void)
-{
-	IMateriaSource* src = new MateriaSource();
-	src->learnMateria(new Ice());
-	src->learnMateria(new Cure());
-	ICharacter* moi = new Character("moi");
-	AMateria* tmp;
-	tmp = src->createMateria("ice");
-	moi->equip(tmp);
-	tmp = src->createMateria("cure");
-	moi->equip(tmp);
-	ICharacter* bob = new Character("bob");
-	moi->use(0, *bob);
-	moi->use(1, *bob);
-	moi->use(-1, *bob);
-	moi->use(3, *bob);
-	tmp = src->createMateria("ice");
-	bob->equip(tmp);
-	bob->use(0, *moi);
-	delete bob;
-	delete moi;
-	delete src;
-}
-
-int fct2(void)
-{
-	IMateriaSource* src = new MateriaSource();
-	src->learnMateria(new Ice());
-	src->learnMateria(new Cure());
-	ICharacter* moi = new Character("moi");
-	AMateria* tmp;
-	tmp = src->createMateria("ice");
-	moi->equip(tmp);
-	tmp = src->createMateria("cure");
-	moi->equip(tmp);
-	ICharacter* bob = new Character("bob");
-	moi->use(0, *moi);
-	moi->use(1, *moi);
-	moi->use(0, *bob);
-	moi->use(1, *bob);
-	delete bob;
-	delete moi;
-	delete src;
-	return (0);
-}
 
 int main()
 {
-	fct();
-	std::cout << "----------------------" << std::endl;
-	fct2();
-	return (0);
+    IMateriaSource* src = new MateriaSource();
+    src->learnMateria(new Ice());
+    src->learnMateria(new Cure());
+    
+    ICharacter* moi = new Character("moi");
+    
+    AMateria* tmp = NULL;
+    AMateria* tmp2 = NULL;
+    tmp = src->createMateria("ice");
+    moi->equip(tmp);
+    std::cout << "[+] ICE = " << tmp->getType() << std::endl;
+    
+    tmp2 = src->createMateria("cure");
+    moi->equip(tmp2);
+    std::cout << "[+] CURE = " << tmp2->getType() << std::endl;
+    
+    ICharacter* bob = new Character("bob");
+    
+    moi->use(0, *bob);
+    moi->use(1, *bob);
+    std::cout << "[+] " << tmp->getType() << " xp = " << tmp->getXP() << std::endl;
+    std::cout << "[+] " << tmp2->getType() << " xp = " << tmp2->getXP() << std::endl;
+
+    
+    moi->use(0, *bob);
+    std::cout << "[+] " << tmp->getType() << " xp = " << tmp->getXP() << std::endl;
+    std::cout << "[+] " << tmp2->getType() << " xp = " << tmp2->getXP() << std::endl;
+
+    delete bob;
+    delete moi;
+    delete src;
+    
+    return 0;
 }

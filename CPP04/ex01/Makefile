@@ -6,13 +6,14 @@
 #    By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/02 15:04:33 by timlecou          #+#    #+#              #
-#    Updated: 2020/12/04 11:56:16 by timlecou         ###   ########.fr        #
+#    Updated: 2020/12/06 13:21:29 by timlecou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = weapon
 SRCS = AWeapon.cpp PlasmaRifle.cpp PowerFist.cpp\
-		Enemy.cpp SuperMutant.cpp RadScorpion.cpp Character.cpp main.cpp
+		Enemy.cpp SuperMutant.cpp RadScorpion.cpp\
+		DesertEagle.cpp Character.cpp BigZombie.cpp main.cpp
 OBJS = $(SRCS:%.cpp=%.o)
 CC = clang++
 FLAGS = -Werror -Wextra -Wall

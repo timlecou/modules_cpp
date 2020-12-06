@@ -6,7 +6,7 @@
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 15:03:07 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/04 14:52:55 by timlecou         ###   ########.fr       */
+/*   Updated: 2020/12/06 13:22:18 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 #include "Character.hpp"
 #include "PowerFist.hpp"
 #include "PlasmaRifle.hpp"
+#include "DesertEagle.hpp"
+#include "BigZombie.hpp"
 
 int		main(void)
 {
@@ -24,19 +26,24 @@ int		main(void)
 
 	Enemy* b = new RadScorpion();
 	Enemy* c = new SuperMutant();
+	Enemy* d = new BigZombie();
 
 	AWeapon* pr = new PlasmaRifle();
 	AWeapon* pf = new PowerFist();
+	AWeapon* de = new DesertEagle();
 
 	moi->equip(pr);
 	std::cout << *moi;
 	moi->equip(pf);
+	std::cout << *moi;
+	moi->equip(de);
+	std::cout << *moi;
 
 	moi->attack(b);
 	std::cout << *moi;
 	moi->equip(pr);
 	std::cout << *moi;
-	moi->attack(b);
+	moi->attack(d);
 	std::cout << *moi;
 	moi->attack(b);
 	std::cout << *moi;

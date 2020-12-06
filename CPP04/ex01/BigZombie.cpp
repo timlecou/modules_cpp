@@ -1,40 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RadScorpion.cpp                                    :+:      :+:    :+:   */
+/*   BigZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 11:02:54 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/06 13:21:18 by timlecou         ###   ########.fr       */
+/*   Updated: 2020/12/06 13:21:07 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "RadScorpion.hpp"
+#include "BigZombie.hpp"
 
-RadScorpion::RadScorpion(void) : Enemy(80, "RadScorpion")
+BigZombie::BigZombie(void) : Enemy(100, "Big Zombie")
 {
-	std::cout << "* click click click *" << std::endl;
+	std::cout << "* Brraaiiiinsss.... *" << std::endl;
 }
 
-RadScorpion::RadScorpion(RadScorpion &rad) : Enemy(80, "Super Mutant")
+BigZombie::BigZombie(BigZombie &zombie) : Enemy(100, "Big Zombie")
 {
-	*this = rad;
-	std::cout << "* click click click *" << std::endl;
+	*this = zombie;
+	std::cout << "* Brraaiiiinsss.... *" << std::endl;
 }
 
-RadScorpion::~RadScorpion(void)
+BigZombie::~BigZombie(void)
 {
-	std::cout << "* SPROCTH *" << std::endl;
+	std::cout << "* AAAAArrrrghhhhh..... *" << std::endl;
 }
 
-RadScorpion&	RadScorpion::operator=(const RadScorpion &rad)
+BigZombie&	BigZombie::operator=(const BigZombie &zombie)
 {
-	Enemy::operator=(rad);
+	Enemy::operator=(zombie);
 	return (*this);
 }
 
-void	RadScorpion::takeDamage(int hp)
+void	BigZombie::takeDamage(int hp)
 {
 	Enemy::takeDamage(hp);
 }

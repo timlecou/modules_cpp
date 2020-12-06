@@ -24,14 +24,21 @@ void fct(void)
 	AMateria* tmp;
 	tmp = src->createMateria("ice");
 	moi->equip(tmp);
+//	delete tmp;
+//	tmp = NULL;
 	tmp = src->createMateria("cure");
 	moi->equip(tmp);
+//	delete tmp;
+//	tmp = NULL;
 	ICharacter* bob = new Character("bob");
 	moi->use(0, *bob);
 	moi->use(1, *bob);
 	moi->use(-1, *bob);
 	moi->use(3, *bob);
-	bob->equip(src->createMateria("ice"));
+	tmp = src->createMateria("ice");
+	bob->equip(tmp);
+//	delete tmp;
+//	tmp = NULL;
 	bob->use(0, *moi);
 	delete bob;
 	delete moi;
@@ -47,8 +54,12 @@ int fct2(void)
 	AMateria* tmp;
 	tmp = src->createMateria("ice");
 	moi->equip(tmp);
+//	delete tmp;
+//	tmp = NULL;
 	tmp = src->createMateria("cure");
 	moi->equip(tmp);
+//	delete tmp;
+//	tmp = NULL;
 	ICharacter* bob = new Character("bob");
 	moi->use(0, *moi);
 	moi->use(1, *moi);
@@ -65,5 +76,6 @@ int main()
 	fct();
 	std::cout << "----------------------" << std::endl;
 	fct2();
+	while (1);
 	return (0);
 }

@@ -6,16 +6,16 @@
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/04 09:54:50 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/06 13:14:25 by timlecou         ###   ########.fr       */
+/*   Updated: 2020/12/06 14:34:16 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DesertEagle.hpp"
 
-DesertEagle::DesertEagle(void) : AWeapon("Desert Eagle", 10, 50)
+DesertEagle::DesertEagle(void) : AWeapon("Desert Eagle", 1, 50)
 {}
 
-DesertEagle::DesertEagle(DesertEagle &desert) : AWeapon ("Desert Eagle", 10, 50)
+DesertEagle::DesertEagle(DesertEagle &desert) : AWeapon ("Desert Eagle", 1, 50)
 {
 	*this = desert;
 }

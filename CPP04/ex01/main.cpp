@@ -6,7 +6,7 @@
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 15:03:07 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/06 13:22:18 by timlecou         ###   ########.fr       */
+/*   Updated: 2020/12/06 14:38:35 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,14 @@ int		main(void)
 	moi->attack(c);
 	moi->attack(c);
 	std::cout << *moi;
+	moi->recoverAP();
+	moi->attack(d);
+	moi->attack(d);
+	moi->attack(d);
 	delete pr;
 	delete pf;
+	delete de;
+	delete b;
 	delete moi;
 	return (0);
 }

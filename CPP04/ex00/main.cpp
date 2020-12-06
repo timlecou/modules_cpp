@@ -6,13 +6,14 @@
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 10:52:12 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/02 12:53:09 by timlecou         ###   ########.fr       */
+/*   Updated: 2020/12/06 13:51:46 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Sorcerer.hpp"
 #include "Victim.hpp"
 #include "Peon.hpp"
+#include "Zombie.hpp"
 
 int		main(void)
 {
@@ -24,7 +25,7 @@ int		main(void)
 
 	Victim		jim("Jimmy");
 	Peon		joe("Joe");
-	Victim		thomas(jim);
+	Zombie		thomas("Thomas");
 
 	std::cout << "----------------Announces-----------------" << std::endl;
 	std::cout << robert << tim << nico << jim << joe << thomas;

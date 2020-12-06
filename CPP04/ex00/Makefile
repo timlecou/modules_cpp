@@ -6,12 +6,12 @@
 #    By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/02 10:48:40 by timlecou          #+#    #+#              #
-#    Updated: 2020/12/02 12:26:07 by timlecou         ###   ########.fr        #
+#    Updated: 2020/12/06 13:51:02 by timlecou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = sorcerer
-SRCS = Sorcerer.cpp Victim.cpp Peon.cpp main.cpp
+SRCS = Sorcerer.cpp Victim.cpp Peon.cpp Zombie.cpp main.cpp
 CC = clang++
 FLAGS = -Werror -Wextra -Wall
 OBJS = $(SRCS:%.cpp=%.o)

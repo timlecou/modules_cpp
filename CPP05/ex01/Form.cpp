@@ -6,7 +6,7 @@
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 17:20:11 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/07 10:24:05 by timlecou         ###   ########.fr       */
+/*   Updated: 2020/12/07 19:01:29 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Form::Form(std::string name, int sgrade, int egrade): _name(name), _sgrade(sgrade), _egrade(egrade)
 {
+	this->_sign = false;
 	if (sgrade < 1 || egrade < 1)
 		throw Form::GradeTooHighException();
 	if (sgrade > 150 || egrade > 150)

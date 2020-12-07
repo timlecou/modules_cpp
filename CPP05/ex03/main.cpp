@@ -6,7 +6,7 @@
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 15:33:57 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/07 17:24:13 by timlecou         ###   ########.fr       */
+/*   Updated: 2020/12/07 19:11:58 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ int		main(void)
 	{
 		std::cout << e.what() << std::endl;
 	}
+	delete fo;
 	std::cout << std::endl << std::endl;
 	Intern	in2;
 	Bureaucrat	bu2("Momo", 1);
 	Form	*fo2;
-
 	try
 	{
 		fo2 = in2.makeForm("Robotomy Request", "Jimmy");
@@ -46,6 +46,7 @@ int		main(void)
 	{
 		std::cout << e.what() << std::endl;
 	}
+	delete fo2;
 	std::cout << std::endl << std::endl;
 	Intern	in3;
 	Bureaucrat	bu3("Nico", 1);
@@ -61,6 +62,7 @@ int		main(void)
 	{
 		std::cout << e.what() << std::endl;
 	}
+	delete fo3;
 	std::cout << std::endl << std::endl;
 	Intern	in4;
 	Bureaucrat	bu4("Rob", 1);
@@ -76,6 +78,7 @@ int		main(void)
 	{
 		std::cout << e.what() << std::endl;
 	}
+	delete fo4;
 	std::cout << std::endl << std::endl;
 	return (0);
 }

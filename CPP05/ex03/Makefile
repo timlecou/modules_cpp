@@ -6,12 +6,14 @@
 #    By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/06 15:35:04 by timlecou          #+#    #+#              #
-#    Updated: 2020/12/06 17:31:10 by timlecou         ###   ########.fr        #
+#    Updated: 2020/12/07 16:50:00 by timlecou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = bureaucrat
-SRCS = Bureaucrat.cpp Form.cpp main.cpp
+SRCS = Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp\
+		RobotomyRequestForm.cpp PresidentialPardonForm.cpp\
+		Intern.cpp main.cpp
 CC = clang++
 FLAGS = -Werror -Wall -Wextra
 OBJS = $(SRCS:%.cpp=%.o)

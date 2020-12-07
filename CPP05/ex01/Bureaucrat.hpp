@@ -6,14 +6,16 @@
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 15:10:01 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/06 15:45:29 by timlecou         ###   ########.fr       */
+/*   Updated: 2020/12/06 18:10:19 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
 # include <iostream>
+# include "Form.hpp"
 
+class	Form;
 class	Bureaucrat
 {
 	public:
@@ -36,6 +38,8 @@ class	Bureaucrat
 		void		incGrade(void);
 		std::string	getName(void) const;
 		int			getGrade(void) const;
+
+		void		signForm(Form &fo);
 	private:
 		std::string		_name;
 		int				_grade;

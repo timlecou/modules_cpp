@@ -6,7 +6,7 @@
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/06 15:18:43 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/07 12:14:44 by timlecou         ###   ########.fr       */
+/*   Updated: 2020/12/07 16:23:28 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,5 +84,18 @@ void	Bureaucrat::signForm(Form &fo)
 	{
 		std::cout << "<" << this->getName() << "> can't sign <" << fo.getName() << "> because its grade is too low" << std::endl;
 		throw Form::GradeTooLowException();
+	}
+}
+
+void	Bureaucrat::executeForm(Form const &form)
+{
+	try
+	{
+		form.execute(*this);
+		std::cout << "<" << getName() << "> executs <" << form.getName() << ">" << std::endl;
+	}
+	catch (std::exception &e)
+	{
+		std::cout << "<" << getName() << "> can't execute the form because " << e.what() << std::endl;
 	}
 }

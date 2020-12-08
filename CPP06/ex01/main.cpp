@@ -6,11 +6,12 @@
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 18:52:22 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/08 21:45:47 by timlecou         ###   ########.fr       */
+/*   Updated: 2020/12/08 22:18:00 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <cmath>
 
 struct	Data {std::string	s1; int	nb; std::string	s2; };
 
@@ -23,7 +24,7 @@ void	*serialize(void)
 		int	nb = rand() % 51;
 		data->s1.push_back(ran[nb]);
 	}
-	data->nb = rand() % 9;
+	data->nb = rand() % 99999;
 	for (int j = 0; j < 8; j++)
 	{
 		int	nb = rand() % 51;
@@ -51,6 +52,6 @@ int		main(void)
 	std::cout << ret->s1 << std::endl;
 	std::cout << ret->nb << std::endl;
 	std::cout << ret->s2 << std::endl;
-
+	delete ret;
 	return (0);
 }

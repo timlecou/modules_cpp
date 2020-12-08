@@ -6,7 +6,7 @@
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 12:31:44 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/08 16:19:12 by timlecou         ###   ########.fr       */
+/*   Updated: 2020/12/08 22:14:49 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <iostream>
 # include <cmath>
 # include <iomanip>
+# include <limits.h>
 
 class	Convert
 {

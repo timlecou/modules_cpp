@@ -6,7 +6,7 @@
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/08 21:57:57 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/08 22:11:22 by timlecou         ###   ########.fr       */
+/*   Updated: 2020/12/08 22:19:16 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,9 @@ int		main(void)
 	identify_from_pointer(b);
 	identify_from_pointer(c);
 	std::cout << std::endl;
-	identify_from_reference(*a);
-	identify_from_reference(*b);
 	identify_from_reference(*c);
+	identify_from_reference(*b);
+	identify_from_reference(*a);
 
 	delete a;
 	delete b;

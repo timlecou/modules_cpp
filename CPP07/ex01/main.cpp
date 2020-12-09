@@ -6,7 +6,7 @@
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 12:33:45 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/09 18:44:22 by timlecou         ###   ########.fr       */
+/*   Updated: 2020/12/09 18:56:48 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,29 +28,27 @@ void	fct2(T c)
 
 int		main(void)
 {
-	char	str[9] = "abcdefg\0";
+	char	str[8] = "abcdefg";
 	int		nb[9] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 	std::string	str2[3] = {"salut ", "ca ", "va ?"};
 
 	std::cout << "----------Test-with-print-function-----------" << std::endl;
 	std::cout << std::endl << "Test with int array: ";
-	iter(nb, 7, fct);
+	iter(nb, 9, fct);
 	std::cout << std::endl;
 	std::cout << "Test with char array: ";
-	iter(str, 9, fct);
+	iter(str, 7, fct);
 	std::cout << std::endl;
 	std::cout << "Test with string array: ";
 	iter(str2, 3, fct);
 	std::cout << std::endl << std::endl;
 	std::cout << "----------Test-with-add-function-----------" << std::endl;
 	std::cout << std::endl << "Test with int array: ";
-	iter(nb, 7, fct2);
+	iter(nb, 9, fct2);
 	std::cout << std::endl;
 	std::cout << "Test with char array: ";
-	iter(str, 9, fct2);
+	iter(str, 7, fct2);
 	std::cout << std::endl;
-	std::cout << "Test with string array: ";
-	iter(str2, 3, fct2);
 	std::cout << std::endl;
 
 	return (0);

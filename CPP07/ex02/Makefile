@@ -6,11 +6,11 @@
 #    By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/12/08 12:15:11 by timlecou          #+#    #+#              #
-#    Updated: 2020/12/09 17:47:19 by timlecou         ###   ########.fr        #
+#    Updated: 2020/12/09 18:58:25 by timlecou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = convert
+NAME = array
 SRCS = main.cpp
 OBJS = $(SRCS:%.cpp=%.o)
 CC = clang++

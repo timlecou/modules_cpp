@@ -6,7 +6,7 @@
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/09 19:05:23 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/11 20:28:34 by timlecou         ###   ########.fr       */
+/*   Updated: 2020/12/11 22:37:27 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 # include <vector>
 # include <deque>
 # include <set>
-# include <array>
 # include <queue>
 
 class	NotFoundException : public std::exception

@@ -6,7 +6,7 @@
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 12:31:23 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/11 20:28:17 by timlecou         ###   ########.fr       */
+/*   Updated: 2020/12/11 22:37:21 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,18 +74,6 @@ int		main(void)
 		li.push_back(42);
 		li.push_back(32);
 		li.push_back(52);
-		try {
-			std::cout << *easyfind(li, 42) << std::endl;
-			std::cout << *easyfind(li, 40) << std::endl;
-		}
-		catch (std::exception &e) {
-			std::cout << e.what() << std::endl;
-		}
-	}
-	{
-		std::cout << "--------------ARRAY----------------" << std::endl;
-		std::array<int, 6>	li;
-		li.fill(42);
 		try {
 			std::cout << *easyfind(li, 42) << std::endl;
 			std::cout << *easyfind(li, 40) << std::endl;

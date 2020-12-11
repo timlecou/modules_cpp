@@ -6,13 +6,14 @@
 /*   By: timlecou <timlecou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/11 13:45:50 by timlecou          #+#    #+#             */
-/*   Updated: 2020/12/11 16:42:25 by timlecou         ###   ########.fr       */
+/*   Updated: 2020/12/11 22:38:46 by timlecou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SPAN_HPP
 # define SPAN_HPP
 # include <iostream>
+# include <algorithm>
 
 class	Span
 {
